@@ -1,14 +1,10 @@
-FROM misakai/java
-MAINTAINER Roman Atachiants "roman@misakai.com"
-
-
-# We need git & maven to build 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git maven
+FROM manycore/java
+MAINTAINER Roman Atachiants "atachiar@scss.tcd.ie"
 
 #RUN git clone https://github.com/Kelindar/docker-heatmap.git /app
 
 RUN mkdir /app
-ADD ./* /app
+ADD ./* /app/*
 RUN /app/build.sh
 
 # Solr Port
