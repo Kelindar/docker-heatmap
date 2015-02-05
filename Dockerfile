@@ -1,26 +1,17 @@
 FROM misakai/java
 MAINTAINER Roman Atachiants "roman@misakai.com"
 
-# ENV ZOOKEEPER_VERSION 3.4.6
-# ADD dist/zookeeper-$ZOOKEEPER_VERSION.tar.gz /opt/
-# RUN mv /opt/zookeeper-$ZOOKEEPER_VERSION /opt/zookeeper
-# WORKDIR /opt/zookeeper
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y zookeeper
+# We need git & maven to build 
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git maven
 
-ADD ./conf/configuration.xsl /etc/zookeeper/conf/
-ADD ./conf/environment /etc/zookeeper/conf/
-ADD ./conf/log4j.properties /etc/zookeeper/conf/
-ADD ./conf/zoo.cfg /etc/zookeeper/conf/
-ADD ./start.sh /
+#RUN git clone https://github.com/Kelindar/docker-heatmap.git /app
 
-# Zookeeper client port
-EXPOSE 2181
+RUN mkdir /app
+ADD ./* /app
+RUN /app/build.sh
 
-# Zookeeper peer port
-EXPOSE 2888
+# Solr Port
+EXPOSE 8983
 
-# Zookeeper leader (election) port
-EXPOSE 3888
-
-CMD ["/start.sh"]
+CMD ["/run.sh"]
