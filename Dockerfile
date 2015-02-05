@@ -11,5 +11,6 @@ RUN sudo mvn --settings /app/settings.xml -f /app/pom.xml clean package -Ddist.d
 
 # Solr Port
 EXPOSE 8983
+EXPOSE 8990
 
-CMD ["cd /app", "sudo /bin/bash run.sh"]
+CMD ["/bin/bash", "/app/run.sh"]
