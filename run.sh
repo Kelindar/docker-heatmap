@@ -8,8 +8,8 @@ export SOLR_HOME_DIR=/app/solr-home
 export SOLR_DATA_DIR=/app/solr-data
 cd /app/deps
 java \
-    -Xms${JAVA_MEMORY_MAX:-"1G"} \
-    -Xmx${JAVA_MEMORY_MAX:-"1G"} \
+    -Xms${JAVA_MEMORY_MAX:-"512M"} \
+    -Xmx${JAVA_MEMORY_MAX:-"512M"} \
     -XX:+UseG1GC \
     -XX:MaxGCPauseMillis=200 \
     -server \
