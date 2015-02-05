@@ -1,8 +1,0 @@
-{ "name": "sample",
-  "version": "0.0.1",
-  "description": "Heamap Web Server",
-  "main": "app.js",
-  "dependencies": {
-    "express": "*"
-  }
-}
