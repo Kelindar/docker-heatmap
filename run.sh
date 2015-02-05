@@ -6,7 +6,7 @@ export SOLR_HOME_DIR=/app/solr-home
 
 # set this to the directory where solr's index should be stored
 export SOLR_DATA_DIR=/app/solr-data
-#cd deps
+cd /app/deps
 java \
     -Xms${JAVA_MEMORY_MAX:-"1G"} \
     -Xmx${JAVA_MEMORY_MAX:-"1G"} \
@@ -24,4 +24,4 @@ java \
     -Dsolr.dataDir=${SOLR_DATA_DIR} \
     -Djetty.port=${HTTP_PORT:-"5000"} \
     -Djava.util.logging.config.file=${SOLR_HOME_DIR}/logging.properties \
-    -jar '/app/deps/start.jar'
+    -jar 'start.jar'
