@@ -2,10 +2,10 @@ export HTTP_PORT=8990
 export SOLR_MASTER_PORT=8990
 
 # set this to point to the directory containing solr-config.xml
-export SOLR_HOME_DIR=$HOME/shutterstock-heatmap-toolkit/solr/solr-home
+export SOLR_HOME_DIR=/app/solr-home
 
 # set this to the directory where solr's index should be stored
-export SOLR_DATA_DIR=$HOME/shutterstock-heatmap-toolkit/solr-data
+export SOLR_DATA_DIR=/app/solr-data
 cd deps
 java \
     -Xms${JAVA_MEMORY_MAX:-"1G"} \

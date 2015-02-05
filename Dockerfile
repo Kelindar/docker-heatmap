@@ -5,7 +5,7 @@ RUN git clone https://github.com/manycore/docker-solr.git /app
 
 #RUN mkdir /app
 #ADD ./* /app/*
-RUN /app/build.sh
+RUN sudo /app/build.sh
 
 # Solr Port
 EXPOSE 8983
