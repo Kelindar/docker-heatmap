@@ -241,18 +241,39 @@
 
 
  <fields>
-   <field name="_version_" type="long"      indexed="true"  stored="true"/>
-   <field name="uid" type="string" indexed="true" stored="true" required="true"/> 
-   <field name="site" type="string" indexed="true" stored="false"/>
-   <field name="page" type="string" indexed="true" stored="false"/>
-   <field name="mouse_x_y" type="string" indexed="true" stored="true"/> 
-   <field name="timestamp" type="date" indexed="true"  stored="false"/>
-   <field name="country" type="string" indexed="true" stored="false"/>
-   <field name="language" type="string" indexed="true" stored="false"/>
-   <field name="browser" type="string" indexed="true" stored="false"/>
-   <field name="operating_system" type="string" indexed="true" stored="false"/>
-   <field name="viewport_width" type="integer" indexed="true" stored="false"/>
+  <field name="_version_" type="long"      indexed="true"  stored="true"/>
+  <field name="uid" type="string" indexed="true" stored="true" required="true"/> 
+  <field name="mouse_x_y" type="string" indexed="true" stored="true"/> 
+  <field name="site" type="string" indexed="true" stored="false"/>
+  <field name="page" type="string" indexed="true" stored="false"/>
+  <field name="timestamp" type="date" indexed="true"  stored="false"/>
+  <field name="country" type="string" indexed="true" stored="false"/>
+  <field name="language" type="string" indexed="true" stored="false"/>
+
+  <field name="viewport_width" type="integer" indexed="true" stored="false"/>
+  <field name="viewport_height" type="integer" indexed="true" stored="false"/>
+  <field name="visitor_id" type="string" indexed="true" stored="false"/>
+  <field name="visit_id" type="string" indexed="true" stored="false"/>
+  <field name="event_type" type="integer" indexed="true" stored="false"/>
+  <field name="scroll_x" type="string" indexed="true" stored="false"/> 
+  <field name="scroll_y" type="string" indexed="true" stored="false"/> 
+  <field name="element_id" type="string" indexed="true" stored="false"/> 
+  <field name="element_id_from" type="string" indexed="true" stored="false"/>
+  <field name="element_class" type="string" indexed="true" stored="false"/> 
+  <field name="element_class_from" type="string" indexed="true" stored="false"/> 
+
+  <field name="element_name" type="string" indexed="true" stored="false"/>
+  <field name="element_tag" type="string" indexed="true" stored="false"/> 
+  <field name="element_type" type="string" indexed="true" stored="false"/> 
+  <field name="element_checked" type="string" indexed="true" stored="false"/>
+  <field name="element_value" type="string" indexed="true" stored="false"/> 
+  <field name="element_x_y" type="string" indexed="true" stored="false"/> 
+  <field name="browser" type="string" indexed="true" stored="false"/>
+  <field name="browser_version" type="string" indexed="true" stored="false"/>
+  <field name="operating_system" type="string" indexed="true" stored="false"/>
+  <field name="request_path" type="string" indexed="true" stored="false"/>
  </fields>
+
 
  <!-- Field to use to determine and enforce document uniqueness. 
       Unless this field is marked with required="false", it will be a required field
