@@ -265,7 +265,7 @@
  <uniqueKey>uid</uniqueKey>
 
  <!-- field for the QueryParser to use when an explicit fieldname is absent -->
- <defaultSearchField>page</defaultSearchField>
+ <defaultSearchField>url</defaultSearchField>
 
  <!-- SolrQueryParser configuration: defaultOperator="AND|OR" -->
  <solrQueryParser defaultOperator="AND"/>
